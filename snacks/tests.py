@@ -6,6 +6,7 @@ class SnackTests(TestCase):
     def test_snack_list_status_code(self):
         url = reverse('snack_list')
         response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
 
     # test templates
     def test_snack_list_temp(self):
